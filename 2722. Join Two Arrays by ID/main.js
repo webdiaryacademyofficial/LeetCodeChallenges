@@ -8,22 +8,22 @@ const arr2 = [
 ];
 
 var join = function (arr1, arr2) {
-  let resultArr = {};
+  let resultObj = {};
   let finalArray = [];
   for (let i = 0; i < arr1.length; i++) {
     let key = arr1[i]["id"];
-    resultArr[key] = arr1[i];
+    resultObj[key] = arr1[i];
   }
 
   for (let j = 0; j < arr2.length; j++) {
-    if (resultArr.hasOwnProperty(arr2[j]["id"])) {
-      resultArr[arr2[j]["id"]] = { ...resultArr[arr2[j]["id"]], ...arr2[j] };
+    if (resultObj.hasOwnProperty(arr2[j]["id"])) {
+      resultObj[arr2[j]["id"]] = { ...resultObj[arr2[j]["id"]], ...arr2[j] };
     } else {
-      resultArr[arr2[j]["id"]] = arr2[j];
+      resultObj[arr2[j]["id"]] = arr2[j];
     }
   }
 
-  finalArray = Object.values(resultArr);
+  finalArray = Object.values(resultObj);
 
   return finalArray;
 };
