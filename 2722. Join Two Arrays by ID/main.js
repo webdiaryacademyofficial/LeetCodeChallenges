@@ -30,3 +30,17 @@ var join = function (arr1, arr2) {
 
 const joinedArr = join(arr1, arr2);
 console.log(joinedArr);
+
+// Short code answer
+// ---------------------------------------------------------------------
+const join = () => {
+  let joinedObj = {};
+  let finalArr = [];
+  arr1.forEach((item) => (joinedObj[item.id] = { ...item }));
+  arr2.forEach(
+    (item) => (joinedObj[item.id] = { ...joinedObj[item.id], ...item })
+  );
+
+  finalArr = Object.values(joinedObj);
+  return finalArr;
+};
