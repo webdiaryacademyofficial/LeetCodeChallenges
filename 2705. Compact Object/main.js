@@ -17,7 +17,6 @@ var compactObject = function (obj) {
     const result = {};
     for (let key in obj) {
       const recRes = compactObject(obj[key]);
-      console.log(recRes);
       if (Boolean(recRes)) {
         result[key] = recRes;
       }

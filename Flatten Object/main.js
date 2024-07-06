@@ -21,13 +21,13 @@ const obj = {
 let resultObj = {};
 
 const flattenObj = (obj) => {
-  let primaryKeyObjects = {};
+  let primaryKeyObject = {};
 
   for (let pk in obj) {
-    primaryKeyObjects = obj[pk];
+    primaryKeyObject = obj[pk];
 
-    if (typeof primaryKeyObjects === "object") {
-      flattenObj(primaryKeyObjects);
+    if (typeof primaryKeyObject === "object") {
+      flattenObj(primaryKeyObject);
     } else {
       resultObj[pk] = obj[pk];
     }
