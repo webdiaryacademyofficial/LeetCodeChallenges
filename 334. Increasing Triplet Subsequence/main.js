@@ -1,26 +1,14 @@
-// let numbers = [1,2,3,4,5]
-// Output: true
-// let numbers =  [2,1,5,0,4,6]
-// Output: true
-let numbers = [5, 4, 3, 2, 1];
-// Output: false
+let numbers = [2, 1, 5, 0, 4, 2, 0, 16];
 
-// let numbers = [8, 6, 1, 5, 0, 4, 7] //true
-// Output: false
-// let numbers = [2,4,-2,-3]
-// Output: false
-
-// let numbers = [1, 2, 3, 4, 5]; //true
-
-var increasingTriplet = function (numbers) {
+const increasingTriplet = function (numbers) {
   let smallest = Infinity;
   let secondSmallest = Infinity;
 
-  for (num of numbers) {
-    if (num <= smallest) {
-      smallest = num; //
-    } else if (num <= secondSmallest) {
-      secondSmallest = num; //
+  for (let number of numbers) {
+    if (number <= smallest) {
+      smallest = number;
+    } else if (number <= secondSmallest) {
+      secondSmallest = number;
     } else {
       return true;
     }
@@ -31,8 +19,86 @@ var increasingTriplet = function (numbers) {
 
 console.log(increasingTriplet(numbers));
 
+//Smallest & Second smallest
+// let numbers = [31, 14, 2, 13, 13, 41];
+
+// Largest & Second largest
+// let numbers = [1, 6, 5, 14, 27, 16, 13];
+
+// Algorithm : Greedy Algorithm
+// let numbers = [31, 14, 2, 13, 41]
+
+// const findSmallestNumber = (numbers)=> {
+
+//     let smallestNumber = Infinity
+
+//     for(let number of numbers) {
+//         if(number < smallestNumber) {
+//             smallestNumber = number
+//         }
+//     }
+
+//     return smallestNumber
+// }
+
+// console.log(findSmallestNumber(numbers))
+
+// let numbers = [81, 14, 2, 13, 13, 41];
+// const findLargestNumber = (numbers)=> {
+//     let largestNumber = -Infinity
+
+//     for(let number of numbers) {
+//         if(number > largestNumber) {
+//             largestNumber = number
+//         }
+//     }
+
+//     return largestNumber
+// }
+
+// console.log(findLargestNumber(numbers))
+
+// let numbers = [-20, 31, 14, 2, 13, -10, 41, 1];
+
+// const findSecondSmallestNumber = (numbers)=> {
+//     let smallestNumber = Infinity
+//     let secondSmallestNumber = Infinity
+
+//     for(let number of numbers) {
+//         if(number < smallestNumber) {
+//             secondSmallestNumber = smallestNumber
+//             smallestNumber = number
+
+//         } else if(number < secondSmallestNumber) {
+//             secondSmallestNumber = number
+//         }
+//     }
+
+//     console.log(smallestNumber)
+//     console.log(secondSmallestNumber)
+
+//     return secondSmallestNumber
+
+// }
+
+// console.log(findSecondSmallestNumber(numbers))
+
+// let numbers =[1,2,3,4,5]
+// Output: true
+
+// let numbers = [5,4,3,2,1]
+// Output: false
+
+// let numbers = [1,1,1]
+// Output: true
+
 // Related questions
+// let numbers = [1, 6, 5, 14, 27, 16, 13];  Largest & Second largest - Teach greedy with this input
+// let numbers = [31, 14, 2, 13, 13, 41]; Smallest & Second smallest
+
 // Infinity and -Infinity
+// For lll these solution we use Greedy Algorithm
+
 // 1. Finding the Minimum Value in an Array
 // let nums = [34, 12, 45, 2, 18];
 // Output: 2
