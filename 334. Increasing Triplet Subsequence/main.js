@@ -1,5 +1,6 @@
 let numbers = [2, 1, 5, 0, 4, 2, 0, 16];
 
+// Algorithm : Greedy Algorithm
 const increasingTriplet = function (numbers) {
   let smallest = Infinity;
   let secondSmallest = Infinity;

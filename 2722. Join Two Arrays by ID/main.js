@@ -7,14 +7,18 @@ const arr2 = [
   { id: 3, x: 0, y: 0 },
 ];
 
+// Algorithm used : Hash map-based merge or dictionary-based merge
 var join = function (arr1, arr2) {
   let resultObj = {};
   let finalArray = [];
+
+  // First pass: Populate resultObj with arr1 elements
   for (let i = 0; i < arr1.length; i++) {
     let key = arr1[i]["id"];
     resultObj[key] = arr1[i];
   }
 
+  // Second pass: Update or add arr2 elements to resultObj
   for (let j = 0; j < arr2.length; j++) {
     if (resultObj.hasOwnProperty(arr2[j]["id"])) {
       resultObj[arr2[j]["id"]] = { ...resultObj[arr2[j]["id"]], ...arr2[j] };
