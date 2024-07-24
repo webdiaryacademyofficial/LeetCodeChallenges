@@ -8,8 +8,9 @@ let height = [1,8,6,2,5,4,8,3,7]
 // Output: 1
 
 // area = min(height[left], height[right]) * (right - left)
-
+//=================================================================
 // Pattern used : Two pointers
+//=================================================================
 // First approach
 const maxArea = function (height) {
   let left = 0

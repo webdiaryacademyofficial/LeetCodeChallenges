@@ -20,10 +20,9 @@
 
 // let s = "abc", t = "lahbgdc"
 // Output: true
-
-//********************************** */
-// Technique used is : Two pointers
-//********************************** */
+//=================================================================
+// Pattern used : Two pointers
+//=================================================================
 const isSubsequence = function(s, t) {
   let sIndex = 0
   let tIndex = 0

@@ -31,14 +31,13 @@ let nums = [4,4,1,3,1,3,2,2,5,5,1,5,2,1,2,3,5,4], k = 2
 //   k = 59;
 
 //===========================================
-// Technique used : Two pointers approach
+// Pattern used : Two pointers approach
 //===========================================
 let maxOperations = function (nums, k) {
   let leftIndex = 0;
   let rightIndex = nums.length - 1;
   let numsOfOperation = 0;
   nums.sort((a, b) => a - b);
-  console.log(nums)
 
   while (leftIndex < rightIndex) {
     const sum = nums[leftIndex] + nums[rightIndex];

@@ -8,7 +8,9 @@ let nums = [1, 2, 3, 4];
 
 // let nums = [0,0]
 // Output : [0,0]
-
+//=================================================================
+// Pattern used : Two pass
+//=================================================================
 var productExceptSelf = function (number) {
   let arrLength = number.length;
   let resultArr = [];
